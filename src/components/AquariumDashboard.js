@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import mqtt from 'mqtt';
-import { CircularGauge } from 'react-circular-gauge';
+import CircularGauge from 'react-circular-gauge';
 
 const fishTypes = {
   nila: { name: 'Ikan Nila', min: 28, max: 30 },
