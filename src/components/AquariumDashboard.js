@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import mqtt from 'mqtt';
-import CircularGauge from 'react-circular-gauge';
+import CustomGauge from './CustomGauge';
 
 const fishTypes = {
   nila: { name: 'Ikan Nila', min: 28, max: 30 },
@@ -107,19 +107,7 @@ const AquariumDashboard = () => {
       </div>
       
       <div className="gauge-section">
-        <CircularGauge
-          value={currentTemp}
-          minValue={20}
-          maxValue={40}
-          label=""
-          valueLabel=""
-          color="#36d7b7"
-          size={250}
-        />
-        <div className="gauge-labels">
-          <span>20</span>
-          <span>40</span>
-        </div>
+        <CustomGauge value={currentTemp} min={20} max={40} size={200} />
       </div>
       
       <div className="peltier-control">
