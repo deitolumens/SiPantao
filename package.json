@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "buffer": "^6.0.3",
     "mqtt": "^4.3.7",
     "react": "^18.2.0",
     "react-circular-gauge": "^1.0.5",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
-    "buffer": "^6.0.3",
+    "react-scripts": "5.0.1",
     "url": "^0.11.1"
   },
   "scripts": {
@@ -18,17 +18,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
