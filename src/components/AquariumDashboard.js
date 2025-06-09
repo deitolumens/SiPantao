@@ -19,7 +19,7 @@ const AquariumDashboard = () => {
   const clientRef = useRef(null);
 
   useEffect(() => {
-    const brokerUrl = process.env.REACT_APP_MQTT_BROKER || 'wss://420170827cf84a91a23a1f49e62ad579.s1.eu.hivemq.cloud:8883/mqtt';
+    const brokerUrl = process.env.REACT_APP_MQTT_BROKER || 'wss://420170827cf84a91a23a1f49e62ad579.s1.eu.hivemq.cloud:8884/mqtt';
     const client = mqtt.connect(brokerUrl, {
       clientId: 'sipantao-web-' + Math.random().toString(16).substr(2, 8),
       username: process.env.REACT_APP_MQTT_USERNAME || 'admin',
