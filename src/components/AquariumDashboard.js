@@ -19,12 +19,15 @@ const AquariumDashboard = () => {
   const clientRef = useRef(null);
 
   useEffect(() => {
-    const brokerUrl = process.env.REACT_APP_MQTT_BROKER || 'wss://broker.emqx.io:8084/mqtt';
+    const brokerUrl = process.env.REACT_APP_MQTT_BROKER || 'wss://420170827cf84a91a23a1f49e62ad579.s1.eu.hivemq.cloud:8883/mqtt';
     const client = mqtt.connect(brokerUrl, {
       clientId: 'sipantao-web-' + Math.random().toString(16).substr(2, 8),
+      username: process.env.REACT_APP_MQTT_USERNAME || 'admin',
+      password: process.env.REACT_APP_MQTT_PASSWORD || 'Admin123',
       clean: true,
       connectTimeout: 4000,
-      reconnectPeriod: 1000
+      reconnectPeriod: 1000,
+      rejectUnauthorized: false // Penting untuk koneksi SSL
     });
 
     clientRef.current = client;
@@ -51,6 +54,7 @@ const AquariumDashboard = () => {
     });
 
     client.on('error', (err) => {
+      console.error('Kesalahan koneksi:', err);
       setMqttStatus(`Error: ${err.message}`);
     });
 
