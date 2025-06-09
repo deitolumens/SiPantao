@@ -20,7 +20,7 @@ const AquariumDashboard = () => {
 
   useEffect(() => {
     const host = "420170827cf84a91a23a1f49e62ad579.s1.eu.hivemq.cloud";
-    const port = 8883;
+    const port = 8884;
     const clientId = `sipantao-web-${Math.random().toString(16).substr(2, 8)}`;
     const url = `wss://${host}:${port}/mqtt`;
     const client = mqtt.connect(url, {
