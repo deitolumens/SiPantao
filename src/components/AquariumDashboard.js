@@ -4,9 +4,9 @@ import CustomGauge from './CustomGauge';
 
 const fishTypes = {
   nila: { name: 'Ikan Nila', min: 28, max: 30 },
-  lele: { name: 'Ikan Lele', min: 26, max: 28 },
-  mas: { name: 'Ikan Mas', min: 24, max: 26 },
-  cupang: { name: 'Ikan Cupang', min: 26, max: 28 }
+  patin: { name: 'Ikan Patin', min: 29, max: 31 },
+  papuyu: { name: 'Ikan Papuyu', min: 26, max: 30 },
+  gabus: { name: 'Ikan Gabus', min: 28, max: 31 }
 };
 
 const AquariumDashboard = () => {
